@@ -12,6 +12,7 @@
 		199903E3205AE41A00F4BF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199903E1205AE41A00F4BF43 /* Main.storyboard */; };
 		199903E5205AE41A00F4BF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199903E4205AE41A00F4BF43 /* Assets.xcassets */; };
 		199903E8205AE41A00F4BF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199903E6205AE41A00F4BF43 /* LaunchScreen.storyboard */; };
+		19B43736205EE52A00B17D9B /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B43735205EE52A00B17D9B /* MainScreen.swift */; };
 		19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C161A5205C063F00E5EA8F /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		199903E4205AE41A00F4BF43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		199903E7205AE41A00F4BF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199903E9205AE41A00F4BF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19B43735205EE52A00B17D9B /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		19C161A5205C063F00E5EA8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				199903DF205AE41A00F4BF43 /* LoginScreen.swift */,
+				19B43735205EE52A00B17D9B /* MainScreen.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B43736205EE52A00B17D9B /* MainScreen.swift in Sources */,
 				199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */,
 				19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */,
 				199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */,
