@@ -6,14 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Login Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Login Screen" id="BYZ-38-t0r" customClass="ViewController" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="LoginView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,11 +40,132 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="F5T-oN-U2H" id="Pr6-xO-xEr"/>
+                        <segue destination="ZtO-l5-3jH" kind="show" identifier="loginSegue-Employee" action="showDetailViewController:sender:" id="bff-Dm-7hY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
         </scene>
+        <!--MainScreen-Employee-->
+        <scene sceneID="nEG-0t-Rga">
+            <objects>
+                <viewController id="HCL-SZ-aJn" userLabel="MainScreen-Employee" customClass="MainScreenEmployee" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mN8-Ut-uGT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="uNO-c8-QPk">
+                                <rect key="frame" x="16" y="64" width="105" height="150"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-hi-IJE">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Pink View">
+                                            <color key="titleColor" red="1" green="0.23921568630000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="pinkSegue" id="D8L-mt-p6h"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptb-RS-Mxy">
+                                        <rect key="frame" x="0.0" y="55" width="105" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Green View">
+                                            <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="greenSegue" id="kWB-xs-Xc0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-s0-NS7">
+                                        <rect key="frame" x="0.0" y="110" width="89" height="40"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
+                                        <state key="normal" title="Blue View">
+                                            <color key="titleColor" red="0.23529411759999999" green="0.3921568627" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="blueSegue" id="Fek-6C-QXe"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="jSt-wV-E00"/>
+                                    <constraint firstAttribute="height" constant="150" id="qHp-vs-wLX"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-ak-rrX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.53333333329999999" green="0.47058823529999999" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="f3S-ak-rrX" secondAttribute="trailing" id="6V9-Zl-eqr"/>
+                            <constraint firstItem="f3S-ak-rrX" firstAttribute="leading" secondItem="mN8-Ut-uGT" secondAttribute="leading" id="N9P-tl-2gl"/>
+                            <constraint firstItem="f3S-ak-rrX" firstAttribute="top" secondItem="Rn8-Nb-PJE" secondAttribute="top" id="qJM-Ab-nsa"/>
+                            <constraint firstItem="Rn8-Nb-PJE" firstAttribute="bottom" secondItem="f3S-ak-rrX" secondAttribute="bottom" id="tPy-bG-NHt"/>
+                            <constraint firstAttribute="trailing" secondItem="f3S-ak-rrX" secondAttribute="trailing" id="tok-9K-6Kh"/>
+                            <constraint firstItem="uNO-c8-QPk" firstAttribute="leading" secondItem="mN8-Ut-uGT" secondAttribute="leadingMargin" id="vby-ao-EY1"/>
+                            <constraint firstItem="uNO-c8-QPk" firstAttribute="top" secondItem="Rn8-Nb-PJE" secondAttribute="top" id="zqu-M9-nrr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rn8-Nb-PJE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R2s-st-hfr">
+                        <barButtonItem key="leftBarButtonItem" image="Hamburger Icon" id="QVe-23-XwQ">
+                            <color key="tintColor" red="0.24998261885820083" green="0.2899272705311946" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="menuTapped:" destination="HCL-SZ-aJn" id="LNb-T8-RFQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="leadingC" destination="N9P-tl-2gl" id="ixB-pl-D8z"/>
+                        <outlet property="slidingView" destination="f3S-ak-rrX" id="Zkl-qw-yWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yII-XS-SsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1781.5999999999999" y="32.833583208395808"/>
+        </scene>
+        <!--Categories Screen-->
+        <scene sceneID="9NG-9V-Bkz">
+            <objects>
+                <viewController storyboardIdentifier="Categories Screen" title="Categories Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h3V-Ed-zrm" customClass="CategoriesScreen" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y8g-Ow-iDB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WP6-03-UgY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wfu-Xi-ExH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2721" y="33"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gqr-eD-woS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZtO-l5-3jH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" alpha="0.5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YwO-Ql-qmp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HCL-SZ-aJn" kind="relationship" relationship="rootViewController" id="4Qs-tV-TFO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="alb-lh-Kwi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="974.39999999999998" y="33.283358320839582"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Hamburger Icon" width="50" height="50"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="kWB-xs-Xc0"/>
+    </inferredMetricsTieBreakers>
 </document>
