@@ -8,28 +8,41 @@
 
 import UIKit
 
+// this Protocol will handle getting the choice of CAtegory the user selected form the delegate view ocntroller
+protocol CategoriesScreenDelegate: class {
+    func didSelectCategory() -> String
+}
 
 class CategoriesScreen: UIViewController {
     
-    var background = UIView()
-    var segueName = "greenSegue"
-    
+    // Creating Delegate link
+    weak var delegate: CategoriesScreenDelegate!
+    @IBOutlet var background: UIView!
+
     override func viewDidLoad() {
-        
-        if segueName == "pinkSegue"{
-            background.backgroundColor = UIColor.cyan
-        } else if segueName == "greenSegue"{
-            background.backgroundColor = UIColor.green
+        var choice = "noChoiceYet"
 
-        }else if segueName == "blueSegue"{
-            background.backgroundColor = UIColor.blue
-
+        // Make sure the delegate has been set, to avoid crashing incase it hasnt been set
+        guard let delegate = self.delegate else {
+            print("Delegate for FooTwoDelegateController not set")
+            return
         }
         
-        self.view.addSubview(background)
+        // get the choice the user clicked on from the delegate
+        choice = delegate.didSelectCategory()
+        
+        // Display Appropriate Table based on user selection from previous view
+        if choice == "Pink View"{
+            background.backgroundColor = UIColor.cyan
+        } else if choice == "Green View"{
+            background.backgroundColor = UIColor.green
+            
+        }else if choice == "Blue View"{
+            background.backgroundColor = UIColor.blue
+            
+        }
         
         
     }
-    
-    
 }
+

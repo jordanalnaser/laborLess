@@ -65,7 +65,7 @@
                                             <color key="titleColor" red="1" green="0.23921568630000001" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="pinkSegue" id="D8L-mt-p6h"/>
+                                            <action selector="categorySelectionButton:" destination="HCL-SZ-aJn" eventType="touchUpInside" id="C25-0f-WIQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptb-RS-Mxy">
@@ -75,7 +75,7 @@
                                             <color key="titleColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="greenSegue" id="kWB-xs-Xc0"/>
+                                            <action selector="categorySelectionButton:" destination="HCL-SZ-aJn" eventType="touchUpInside" id="5QH-bZ-EI3"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-s0-NS7">
@@ -85,7 +85,7 @@
                                             <color key="titleColor" red="0.23529411759999999" green="0.3921568627" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="h3V-Ed-zrm" kind="show" identifier="blueSegue" id="Fek-6C-QXe"/>
+                                            <action selector="categorySelectionButton:" destination="HCL-SZ-aJn" eventType="touchUpInside" id="1hL-Q0-pPH"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -122,6 +122,7 @@
                     <connections>
                         <outlet property="leadingC" destination="N9P-tl-2gl" id="ixB-pl-D8z"/>
                         <outlet property="slidingView" destination="f3S-ak-rrX" id="Zkl-qw-yWr"/>
+                        <segue destination="h3V-Ed-zrm" kind="show" identifier="goToCategories" id="E5f-jw-QK0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yII-XS-SsB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -131,13 +132,28 @@
         <!--Categories Screen-->
         <scene sceneID="9NG-9V-Bkz">
             <objects>
-                <viewController storyboardIdentifier="Categories Screen" title="Categories Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h3V-Ed-zrm" customClass="CategoriesScreen" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Categories Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h3V-Ed-zrm" customClass="CategoriesScreen" customModule="laborLess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y8g-Ow-iDB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="392-WE-svS">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="392-WE-svS" firstAttribute="leading" secondItem="WP6-03-UgY" secondAttribute="leading" id="4Uj-Jd-MiJ"/>
+                            <constraint firstItem="WP6-03-UgY" firstAttribute="trailing" secondItem="392-WE-svS" secondAttribute="trailing" id="Jv9-O5-jla"/>
+                            <constraint firstItem="392-WE-svS" firstAttribute="top" secondItem="WP6-03-UgY" secondAttribute="top" id="tOo-gi-pJw"/>
+                            <constraint firstItem="WP6-03-UgY" firstAttribute="bottom" secondItem="392-WE-svS" secondAttribute="bottom" id="vnO-ks-aL9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WP6-03-UgY"/>
                     </view>
+                    <connections>
+                        <outlet property="background" destination="392-WE-svS" id="gDC-GE-1x9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfu-Xi-ExH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +181,4 @@
     <resources>
         <image name="Hamburger Icon" width="50" height="50"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="kWB-xs-Xc0"/>
-    </inferredMetricsTieBreakers>
 </document>

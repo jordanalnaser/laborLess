@@ -8,14 +8,13 @@
 
 import UIKit
 
+class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
+  
+    var menuOpen = false
+    var categoryString = "noChoiceYet"
 
-class MainScreenEmployee: UIViewController {
     @IBOutlet weak var slidingView: UIView!
     @IBOutlet weak var leadingC: NSLayoutConstraint!
-    
-    var menuOpen = false
-    
-    
     @IBAction func menuTapped(_ sender: Any) {
         if !menuOpen {
             leadingC.constant = 150
@@ -36,6 +35,32 @@ class MainScreenEmployee: UIViewController {
             print("The animation is complete!")
         }
     }
+    
+    @IBAction func categorySelectionButton(_ sender: UIButton) {
+        // Get the name of the Button that wa pressed
+        categoryString = (sender.titleLabel?.text)!
+        
+        // gog the categories screen
+        performSegue(withIdentifier: "goToCategories", sender: sender)
+    }
+    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // check if we are on the right Segue
+        if segue.identifier == "goToCategories"{
+            // get a reference to the destiantion View controller
+            let destinationViewController = segue.destination as! CategoriesScreen
+            // set its delegate to this view controller, as it is the one handling the selection of the csategory
+            destinationViewController.delegate = self
+        }
+    }
+
+    
+    // confrom to protocol, give us back the name of the selection
+    func didSelectCategory() -> String {
+        return categoryString
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
