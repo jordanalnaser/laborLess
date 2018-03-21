@@ -30,6 +30,7 @@ class CategoriesScreen: UIViewController {
         
         // get the choice the user clicked on from the delegate
         choice = delegate.didSelectCategory()
+         self.parent!.title = choice
         
         // Display Appropriate Table based on user selection from previous view
         if choice == "Pink View"{
@@ -42,6 +43,7 @@ class CategoriesScreen: UIViewController {
             
         }
         
+       
         
     }
 }

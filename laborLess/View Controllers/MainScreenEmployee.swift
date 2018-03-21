@@ -13,8 +13,15 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
     var menuOpen = false
     var categoryString = "noChoiceYet"
 
-    @IBOutlet weak var slidingView: UIView!
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var leadingC: NSLayoutConstraint!
+    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var knowledgeProgress: UIProgressView!
+    @IBOutlet weak var professionalismProgress: UIProgressView!
+    @IBOutlet weak var affordabilityProgress: UIProgressView!
+    
+    
+    
     @IBAction func menuTapped(_ sender: Any) {
         if !menuOpen {
             leadingC.constant = 150
@@ -66,13 +73,13 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // Setup the background location, size, and color
-//        background.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-//        background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
-//        self.view.addSubview(background) // Adds background element to main view
+        // Setup the background color
+        background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
+        
+        // adding Profile Data
         
         
-        // 
+        
         
         
         
