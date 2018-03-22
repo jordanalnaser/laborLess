@@ -19,6 +19,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Setup settings for the background, and its contents
+        background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
+        
         // Add logo
         addLogo(background)
         
@@ -36,9 +39,6 @@ class ViewController: UIViewController {
 
     // Function accepts a layer and it adds the App Logo to its top center
     func addLogo(_ layer:UIImageView){
-        // Setup settings for the background, and its contents
-        layer.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
-        
         // Setup Logo stuff
         let logo:UILabel = UILabel.init(frame: CGRect(x: layer.frame.midX-128, y: layer.frame.minY + 110, width: 300, height: 300))
         
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
         button.titleLabel?.font =  UIFont(name: "Avenir-Heavy", size: 50)
         
         // Setup the Animation of the Button
-        button.addTarget(self, action: #selector(buttonPressed(_ :)), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(buttonPressed(_ :)), for: .touchUpInside)
         
         if label == "Login" {
             // Connect Button to the Login Method
@@ -112,10 +112,44 @@ class ViewController: UIViewController {
     
     // This contains the logic for the Login Button, and it is triggerd when user hits the login button
     @objc func loginPressed(_ sender :UIButton){
-        print("Login Pressed")
-        
-        // Segue into Main Screen View controller if user logins in successfully, and go from there
-
+        // Start Animation of button going down
+        UIButton.animate(withDuration: 0.1, animations: {
+                            sender.transform = CGAffineTransform(scaleX: 0.975, y: 0.96)
+        },
+             completion: { finishGoingDown in
+                // Start Animation of button going up
+                UIButton.animate(withDuration: 0.1, animations: {
+                    sender.transform = CGAffineTransform.identity
+                }, completion: {finishGoingUp in
+                    // Animation for Button is Done, perform actual intended action of button
+                    print("Login Pressed") // testing Purposes
+                    
+                    // Trigger the (Login View) that will prompt user for login data
+                    
+                    // NEEDS TO BE DONE!!!!!
+                        // 1. make login view with text fields, and add it as a popup subview
+                        // 2. connect to fireabse to authiticate data entered
+                        // 3. set the below two variables accodinly and update data containers with apropriate data from database
+                    
+                    let successfulLogin:Bool = true // will be set when user is authenticated from Firebase
+                    let loginType = "Employee" // Will contain the Type of user logged in, also retireved from Firebase
+                    
+                        // 4. do the code below if all whats above is done
+                    
+                    if successfulLogin {
+                        // User is authenticated
+                        if loginType == "Employee" {
+                            // Segue into Main Screen for Employees View controller
+                            self.performSegue(withIdentifier: "loginSegue-Employee", sender:nil)
+                        } else if loginType == "Employer" {
+                            // Segue into Main Screen for Employees View controller
+                            
+                            // NEEDS TO BE DONE!!!!!!
+                        }
+                        
+                    }
+                })
+        })
     }
     
     // This contains the logic for the Signup Button, and it is triggerd when user hits the signup button
