@@ -13,6 +13,7 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     var menuOpen = false
     var categoryString = "noChoiceYet"
 
+    // MARK: Connections from the story board
     @IBOutlet weak var background: UIView!
     // used for the blue effect
     var darkBlur:UIBlurEffect!
@@ -22,9 +23,10 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     @IBOutlet weak var knowledgeProgress: UIProgressView!
     @IBOutlet weak var professionalismProgress: UIProgressView!
     @IBOutlet weak var affordabilityProgress: UIProgressView!
+    @IBOutlet weak var profilePicture: UIImageView!
     
     
-    
+    // triggered when the menu button is tapped, its also connected to Storyboard through IBAction
     @IBAction func menuTapped(_ sender: Any) {
         
         if !menuOpen {
@@ -75,7 +77,7 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     }
     
     
-    // Jobs Approved Table related functions
+    //MARK: Jobs Approved Table delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return approvedJobs.count
     }
@@ -87,6 +89,17 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         cell.jobLabel.text = approvedJobs[indexPath.row].title
         
         return cell
+    }
+    
+    // method congtrols the height of the cells
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // note that indexPath.section is used rather than indexPath.row
+        print("You tapped cell number \(indexPath.row).")
     }
 
     

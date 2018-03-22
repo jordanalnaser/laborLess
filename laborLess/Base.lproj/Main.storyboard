@@ -141,7 +141,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tKf-Zu-Uma">
-                                        <rect key="frame" x="10" y="236.5" width="355" height="130"/>
+                                        <rect key="frame" x="10" y="231.5" width="355" height="140"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your ratings are: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="USa-pU-J2E">
                                                 <rect key="frame" x="10" y="5" width="139.5" height="30"/>
@@ -197,7 +197,7 @@
                                         <constraints>
                                             <constraint firstItem="9iL-yc-9kJ" firstAttribute="top" secondItem="tKf-Zu-Uma" secondAttribute="top" constant="70" id="6bI-7S-JBe"/>
                                             <constraint firstItem="9iL-yc-9kJ" firstAttribute="leading" secondItem="tKf-Zu-Uma" secondAttribute="leading" constant="10" id="8id-9y-r9d"/>
-                                            <constraint firstAttribute="height" constant="130" id="EI1-EO-us6"/>
+                                            <constraint firstAttribute="height" constant="140" id="EI1-EO-us6"/>
                                             <constraint firstItem="USa-pU-J2E" firstAttribute="top" secondItem="tKf-Zu-Uma" secondAttribute="top" constant="5" id="MFM-ys-HRr"/>
                                             <constraint firstItem="nQM-sE-y2N" firstAttribute="leading" secondItem="tKf-Zu-Uma" secondAttribute="leading" constant="10" id="UjP-3y-J9l"/>
                                             <constraint firstItem="nQM-sE-y2N" firstAttribute="top" secondItem="tKf-Zu-Uma" secondAttribute="top" constant="40" id="Upg-f2-pFL"/>
@@ -213,41 +213,37 @@
                                             <constraint firstAttribute="height" constant="180" id="lRB-3h-jZu"/>
                                         </constraints>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="protoTypeCell" id="IKL-4N-y9S" customClass="JobCellTableViewCell" customModule="laborLess" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="protoTypeCell" id="zQY-pR-mOC" customClass="JobCellTableViewCell" customModule="laborLess" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="355" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IKL-4N-y9S" id="UIM-HJ-QfK" userLabel="protoTypeCell">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zQY-pR-mOC" id="kAU-dO-fX2" userLabel="protoTypeCell">
                                                     <rect key="frame" x="0.0" y="0.0" width="355" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yb8-0Z-uz5" userLabel="jobIcon">
-                                                            <rect key="frame" x="5" y="0.0" width="70" height="45"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="45" id="Fg6-DH-Smo"/>
-                                                                <constraint firstAttribute="width" constant="70" id="tOb-Cj-7Z2"/>
-                                                            </constraints>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J00-Nw-uGk" userLabel="jobIcon">
+                                                            <rect key="frame" x="5" y="5" width="50" height="33.5"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Psq-cC-iwq" userLabel="jobLabel">
-                                                            <rect key="frame" x="85" y="2" width="270" height="40"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="40" id="vxh-jn-qAz"/>
-                                                            </constraints>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhP-cP-ThO" userLabel="jobLabel">
+                                                            <rect key="frame" x="65" y="5" width="285" height="33.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="Psq-cC-iwq" firstAttribute="centerY" secondItem="UIM-HJ-QfK" secondAttribute="centerY" id="8in-jE-m8d"/>
-                                                        <constraint firstItem="yb8-0Z-uz5" firstAttribute="leading" secondItem="UIM-HJ-QfK" secondAttribute="leading" constant="5" id="GA3-FJ-MQB"/>
-                                                        <constraint firstItem="yb8-0Z-uz5" firstAttribute="top" secondItem="UIM-HJ-QfK" secondAttribute="top" id="Nk3-zF-M1c"/>
-                                                        <constraint firstItem="Psq-cC-iwq" firstAttribute="leading" secondItem="yb8-0Z-uz5" secondAttribute="trailing" constant="10" id="Uav-tJ-pEn"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Psq-cC-iwq" secondAttribute="trailing" id="ZDk-PL-WcO"/>
+                                                        <constraint firstAttribute="bottom" secondItem="nhP-cP-ThO" secondAttribute="bottom" constant="5" id="9Ct-Rs-WZA"/>
+                                                        <constraint firstItem="nhP-cP-ThO" firstAttribute="leading" secondItem="J00-Nw-uGk" secondAttribute="trailing" constant="10" id="FRI-0d-oAe"/>
+                                                        <constraint firstAttribute="bottom" secondItem="J00-Nw-uGk" secondAttribute="bottom" constant="5" id="J1y-2E-CPK"/>
+                                                        <constraint firstItem="nhP-cP-ThO" firstAttribute="top" secondItem="kAU-dO-fX2" secondAttribute="top" constant="5" id="PRI-YU-fSk"/>
+                                                        <constraint firstAttribute="trailing" secondItem="J00-Nw-uGk" secondAttribute="trailing" constant="300" id="caG-H3-CJU"/>
+                                                        <constraint firstAttribute="trailing" secondItem="nhP-cP-ThO" secondAttribute="trailing" constant="5" id="kOF-N0-ExB"/>
+                                                        <constraint firstItem="J00-Nw-uGk" firstAttribute="top" secondItem="kAU-dO-fX2" secondAttribute="top" constant="5" id="ljF-uS-ylE"/>
+                                                        <constraint firstItem="J00-Nw-uGk" firstAttribute="leading" secondItem="kAU-dO-fX2" secondAttribute="leading" constant="5" id="luk-3i-Jko"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="jobIcon" destination="yb8-0Z-uz5" id="Xgr-hE-rrN"/>
-                                                    <outlet property="jobLabel" destination="Psq-cC-iwq" id="LbW-07-U2w"/>
+                                                    <outlet property="jobIcon" destination="J00-Nw-uGk" id="EIN-RL-gYr"/>
+                                                    <outlet property="jobLabel" destination="nhP-cP-ThO" id="ygw-aP-a77"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -307,6 +303,7 @@
                         <outlet property="knowledgeProgress" destination="TL7-7c-4L1" id="wmV-c0-oif"/>
                         <outlet property="leadingC" destination="N9P-tl-2gl" id="ixB-pl-D8z"/>
                         <outlet property="professionalismProgress" destination="bgL-bz-XK1" id="BuU-0l-BM9"/>
+                        <outlet property="profilePicture" destination="Eew-8a-8C0" id="fUT-ib-0XV"/>
                         <segue destination="h3V-Ed-zrm" kind="show" identifier="goToCategories" id="E5f-jw-QK0"/>
                     </connections>
                 </viewController>
@@ -322,23 +319,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="392-WE-svS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RFt-hQ-bgu" userLabel="jobsTable">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="protoTypeCell" id="XE5-mp-DSw" customClass="JobCellTableViewCell" customModule="laborLess" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XE5-mp-DSw" id="t8V-MG-nMI" userLabel="protoTypeCell">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QbE-dw-aAP" userLabel="jobIcon">
+                                                    <rect key="frame" x="5" y="5" width="70" height="33.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ePJ-qQ-9Ml" userLabel="jobLabel">
+                                                    <rect key="frame" x="85" y="5" width="285" height="33.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QbE-dw-aAP" firstAttribute="leading" secondItem="t8V-MG-nMI" secondAttribute="leading" constant="5" id="19A-4l-beb"/>
+                                                <constraint firstItem="ePJ-qQ-9Ml" firstAttribute="leading" secondItem="QbE-dw-aAP" secondAttribute="trailing" constant="10" id="OPF-gT-WGw"/>
+                                                <constraint firstAttribute="bottom" secondItem="ePJ-qQ-9Ml" secondAttribute="bottom" constant="5" id="OrH-eO-ZDa"/>
+                                                <constraint firstAttribute="bottom" secondItem="QbE-dw-aAP" secondAttribute="bottom" constant="5" id="Qjz-WY-70f"/>
+                                                <constraint firstAttribute="trailing" secondItem="QbE-dw-aAP" secondAttribute="trailing" constant="300" id="mq4-W6-Q2t"/>
+                                                <constraint firstAttribute="trailing" secondItem="ePJ-qQ-9Ml" secondAttribute="trailing" constant="5" id="nMC-9W-nYz"/>
+                                                <constraint firstItem="ePJ-qQ-9Ml" firstAttribute="top" secondItem="t8V-MG-nMI" secondAttribute="top" constant="5" id="q2s-g6-py7"/>
+                                                <constraint firstItem="QbE-dw-aAP" firstAttribute="top" secondItem="t8V-MG-nMI" secondAttribute="top" constant="5" id="zwg-sM-Spm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobIcon" destination="QbE-dw-aAP" id="Tfd-ec-PhU"/>
+                                            <outlet property="jobLabel" destination="ePJ-qQ-9Ml" id="WSO-LH-s1T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="h3V-Ed-zrm" id="ZUa-Uv-PeL"/>
+                                    <outlet property="delegate" destination="h3V-Ed-zrm" id="XML-we-l6G"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="392-WE-svS" firstAttribute="leading" secondItem="WP6-03-UgY" secondAttribute="leading" id="4Uj-Jd-MiJ"/>
-                            <constraint firstItem="WP6-03-UgY" firstAttribute="trailing" secondItem="392-WE-svS" secondAttribute="trailing" id="Jv9-O5-jla"/>
-                            <constraint firstItem="392-WE-svS" firstAttribute="top" secondItem="WP6-03-UgY" secondAttribute="top" id="tOo-gi-pJw"/>
-                            <constraint firstItem="WP6-03-UgY" firstAttribute="bottom" secondItem="392-WE-svS" secondAttribute="bottom" id="vnO-ks-aL9"/>
+                            <constraint firstItem="RFt-hQ-bgu" firstAttribute="top" secondItem="WP6-03-UgY" secondAttribute="top" id="2dg-DW-Ujg"/>
+                            <constraint firstItem="WP6-03-UgY" firstAttribute="bottom" secondItem="RFt-hQ-bgu" secondAttribute="bottom" id="9bL-sl-6zv"/>
+                            <constraint firstItem="RFt-hQ-bgu" firstAttribute="leading" secondItem="WP6-03-UgY" secondAttribute="leading" id="K2x-9l-PV6"/>
+                            <constraint firstItem="WP6-03-UgY" firstAttribute="trailing" secondItem="RFt-hQ-bgu" secondAttribute="trailing" id="whB-sZ-UKQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WP6-03-UgY"/>
                     </view>
-                    <connections>
-                        <outlet property="background" destination="392-WE-svS" id="gDC-GE-1x9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wfu-Xi-ExH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
