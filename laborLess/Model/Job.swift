@@ -11,10 +11,12 @@ class Job {
     var title:String
     var icon:UIImage
     var description:String
+    var phoneNumber:String
     
-    init(_ title:String, _ icon:UIImage, _ description: String) {
+    init(_ title:String, _ icon:UIImage, _ description: String, _ phoneNumber: String) {
         self.title = title
         self.icon = icon
         self.description = description
+        self.phoneNumber = phoneNumber
     }
 }
