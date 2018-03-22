@@ -12,19 +12,18 @@ import UIKit
 
 
 // User profile Data
+var firstName = "Jordan"
+var lastName = "Alnaser"
 
-struct UserData {
-    var firstName = "Jordan"
-    var lastName = "Alnaser"
-    
-    var userRating:Int = 4
-    var profileImage = UIImage(named: "profile.jpg")
-}
+// Ratings Out of 10
+var knowledgeRating:Float = 7
+var professionalismRating:Float = 9
+var affordabilityRating:Float = 3
 
-
-
+var profileImage = UIImage(named: "profile.jpg")
 
 
-
+// Approved Jobs Container
+let approvedJobs = [Job("Fix Honda", #imageLiteral(resourceName: "honda"), "Car needs a new Battery"), Job("Clean Home", #imageLiteral(resourceName: "house"), "House needs Deep Cleaning")]
 
 

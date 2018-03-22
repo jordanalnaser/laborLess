@@ -16,6 +16,8 @@
 		19B43739205F1EF000B17D9B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B43738205F1EF000B17D9B /* Data.swift */; };
 		19B4373C205F709300B17D9B /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B4373B205F709300B17D9B /* CategoriesScreen.swift */; };
 		19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C161A5205C063F00E5EA8F /* Extensions.swift */; };
+		19D4C072206335B60087B9B3 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C071206335B60087B9B3 /* Job.swift */; };
+		19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		19B43738205F1EF000B17D9B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		19B4373B205F709300B17D9B /* CategoriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreen.swift; sourceTree = "<group>"; };
 		19C161A5205C063F00E5EA8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		19D4C071206335B60087B9B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				19B43738205F1EF000B17D9B /* Data.swift */,
+				19D4C071206335B60087B9B3 /* Job.swift */,
+				19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,8 +189,10 @@
 				19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */,
 				19B43739205F1EF000B17D9B /* Data.swift in Sources */,
 				199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */,
+				19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */,
 				19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */,
 				199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */,
+				19D4C072206335B60087B9B3 /* Job.swift in Sources */,
 				19B4373C205F709300B17D9B /* CategoriesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

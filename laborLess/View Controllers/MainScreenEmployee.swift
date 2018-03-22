@@ -8,12 +8,15 @@
 
 import UIKit
 
-class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
+class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableViewDelegate, UITableViewDataSource{
   
     var menuOpen = false
     var categoryString = "noChoiceYet"
 
     @IBOutlet weak var background: UIView!
+    // used for the blue effect
+    var darkBlur:UIBlurEffect!
+    var blurView:UIVisualEffectView!
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var knowledgeProgress: UIProgressView!
@@ -23,23 +26,26 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
     
     
     @IBAction func menuTapped(_ sender: Any) {
+        
         if !menuOpen {
-            leadingC.constant = 150
-            
-            //1
+            leadingC.constant = 250
+            background.addSubview(blurView)
             menuOpen = true
         } else {
-            //if the hamburger menu IS visible, then move the ubeView back to its original position
+            //if the menu is open, then move the background back to its original position
             leadingC.constant = 0
-            
-            //2
             menuOpen = false
         }
         
-        UIView.animate(withDuration: 0.2, delay: 0.0, options: .curveEaseIn, animations: {
+        // Animation for mobing the background, along with displaying the blur effect view
+        UIView.animate(withDuration: 0.25, delay: 0.0, options: .curveEaseIn, animations: {
+            self.menuOpen == true ? (self.blurView.alpha = 1) : (self.blurView.alpha = 0)
             self.view.layoutIfNeeded()
         }) { (animationComplete) in
-            print("The animation is complete!")
+            if !self.menuOpen{
+                // to be done only if the menu is on its way to close
+                self.blurView.removeFromSuperview()
+            }
         }
     }
     
@@ -69,6 +75,23 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
     }
     
     
+    // Jobs Approved Table related functions
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return approvedJobs.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "protoTypeCell",for: indexPath) as! JobCellTableViewCell
+        
+        cell.jobIcon.image = approvedJobs[indexPath.row].icon
+        cell.jobLabel.text = approvedJobs[indexPath.row].title
+        
+        return cell
+    }
+
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -76,8 +99,19 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate {
         // Setup the background color
         background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
         
-        // adding Profile Data
+        // used to create a blur effdect on the background when the menue is open
+        self.darkBlur = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        self.blurView = UIVisualEffectView(effect: darkBlur)
+        self.blurView.alpha = 0
+        self.blurView.frame = (background.superview?.frame)!
         
+        
+        // adding Profile Data
+        greetingLabel.text = "Hello, \(firstName)"
+        
+        professionalismProgress.progress = professionalismRating/10
+        knowledgeProgress.progress = knowledgeRating/10
+        affordabilityProgress.progress = affordabilityRating/10
         
         
         
