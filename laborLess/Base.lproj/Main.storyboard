@@ -134,9 +134,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Eew-8a-8C0">
-                                        <rect key="frame" x="190" y="10" width="213" height="196"/>
+                                        <rect key="frame" x="190" y="10" width="180" height="196"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="213" id="9wf-ed-BU7"/>
                                             <constraint firstAttribute="height" constant="196" id="aLi-co-X1S"/>
                                         </constraints>
                                     </imageView>
@@ -207,11 +206,8 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-uH-bpw" userLabel="approvedJobs">
-                                        <rect key="frame" x="10" y="421.5" width="355" height="180"/>
+                                        <rect key="frame" x="10" y="425" width="355" height="173"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="180" id="lRB-3h-jZu"/>
-                                        </constraints>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="protoTypeCell" id="zQY-pR-mOC" customClass="JobCellTableViewCell" customModule="laborLess" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="355" height="44"/>
@@ -253,7 +249,7 @@
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Approved Jobs List" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AqI-2b-I81">
-                                        <rect key="frame" x="114" y="387" width="147.5" height="20.5"/>
+                                        <rect key="frame" x="114" y="386.5" width="147.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -268,8 +264,10 @@
                                     <constraint firstItem="AqI-2b-I81" firstAttribute="centerY" secondItem="f3S-ak-rrX" secondAttribute="centerY" constant="95" id="ZcA-jL-V9C"/>
                                     <constraint firstItem="AqI-2b-I81" firstAttribute="centerX" secondItem="f3S-ak-rrX" secondAttribute="centerX" id="aRz-wI-PI5"/>
                                     <constraint firstAttribute="trailing" secondItem="Quc-uH-bpw" secondAttribute="trailing" constant="10" id="lTC-4n-ueg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Eew-8a-8C0" secondAttribute="trailing" constant="5" id="mes-Sx-Eh5"/>
                                     <constraint firstItem="tKf-Zu-Uma" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="10" id="o31-19-95B"/>
                                     <constraint firstItem="Eew-8a-8C0" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="190" id="pCt-fR-tPZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Quc-uH-bpw" secondAttribute="bottom" constant="5" id="x6W-mW-dnB"/>
                                     <constraint firstItem="Quc-uH-bpw" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="10" id="xjE-4m-avm"/>
                                 </constraints>
                             </view>
@@ -304,6 +302,7 @@
                         <outlet property="leadingC" destination="N9P-tl-2gl" id="ixB-pl-D8z"/>
                         <outlet property="professionalismProgress" destination="bgL-bz-XK1" id="BuU-0l-BM9"/>
                         <outlet property="profilePicture" destination="Eew-8a-8C0" id="fUT-ib-0XV"/>
+                        <outlet property="trailingC" destination="6V9-Zl-eqr" id="Vha-Ti-Saz"/>
                         <segue destination="h3V-Ed-zrm" kind="show" identifier="goToCategories" id="E5f-jw-QK0"/>
                     </connections>
                 </viewController>

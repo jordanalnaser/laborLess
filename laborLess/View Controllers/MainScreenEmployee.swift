@@ -19,6 +19,7 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     var darkBlur:UIBlurEffect!
     var blurView:UIVisualEffectView!
     @IBOutlet weak var leadingC: NSLayoutConstraint!
+    @IBOutlet weak var trailingC: NSLayoutConstraint!
     @IBOutlet weak var greetingLabel: UILabel!
     @IBOutlet weak var knowledgeProgress: UIProgressView!
     @IBOutlet weak var professionalismProgress: UIProgressView!
@@ -31,11 +32,14 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         
         if !menuOpen {
             leadingC.constant = 250
+            trailingC.constant = 250
             background.addSubview(blurView)
             menuOpen = true
         } else {
             //if the menu is open, then move the background back to its original position
             leadingC.constant = 0
+            trailingC.constant = 0
+
             menuOpen = false
         }
         
@@ -100,6 +104,8 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.row).")
+        
+        self.background.addSubview(JobDetailsView(frame: background.superview!.frame))
     }
 
     
