@@ -1,0 +1,6 @@
+framework module Pods_laborLess {
+  umbrella header "Pods-laborLess-umbrella.h"
+
+  export *
+  module * { export * }
+}
