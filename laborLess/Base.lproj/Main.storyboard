@@ -118,6 +118,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4s-hi-IJE">
                                         <rect key="frame" x="0.0" y="55" width="187" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="house"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="uTJ-FF-ZTk"/>
                                         </constraints>
@@ -129,6 +130,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ptb-RS-Mxy">
                                         <rect key="frame" x="0.0" y="100" width="187" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="auto"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="mWB-HT-gwx"/>
                                         </constraints>
@@ -140,6 +142,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1i-s0-NS7">
                                         <rect key="frame" x="0.0" y="145" width="187" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="pet"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="7az-7s-Zvg"/>
                                         </constraints>
@@ -151,6 +154,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-nk-0ae" userLabel="Cleaning">
                                         <rect key="frame" x="0.0" y="190" width="80" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="cleaning"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="h2f-Va-yeh"/>
                                         </constraints>

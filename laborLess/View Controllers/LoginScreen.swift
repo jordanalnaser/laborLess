@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class LoginScreen: UIViewController {
     
@@ -21,7 +23,6 @@ class LoginScreen: UIViewController {
         // setup the look of the two buttons
         buttonSetup(button: loginButton)
         buttonSetup(button: signupButton)
-
     }
 
 

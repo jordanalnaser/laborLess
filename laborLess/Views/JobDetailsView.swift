@@ -20,7 +20,7 @@ class JobDetailsView: UIView {
     var size:CGFloat = 0
     
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, jobID:String) {
         
         // Initlize class attributes
         jobTitle = UILabel()
@@ -97,9 +97,15 @@ class JobDetailsView: UIView {
         
     
     // MARK: Feed data into thier respective Elements
-        jobTitle.text = approvedJobs[1].description
-        jobPicture.image = approvedJobs[1].icon
-        jobDescription.text = "Description: \n\(approvedJobs[1].description)"
+        
+        
+        let jobIndex = getJob(jobID)
+        
+        jobTitle.text = jobsPosted[jobIndex].description
+        jobPicture.image = jobsPosted[jobIndex].icon
+        jobDescription.text = "Description: \n\(jobsPosted[jobIndex].description)"
+        
+        
         
     // MARK: Add Elements to the view
         self.addSubview(jobTitle)
@@ -166,6 +172,16 @@ class JobDetailsView: UIView {
     }
 
     
+    // this function gives me back the job index i need to display to the user
+    func getJob(_ jobID: String) -> Int {
+        for jobIndex in 0 ..< jobsPosted.count {
+            if jobsPosted[jobIndex].jobID == jobID {
+                return jobIndex
+            }
+        }
+        return -1
+    }
+
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

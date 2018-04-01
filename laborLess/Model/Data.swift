@@ -34,23 +34,20 @@ var affordabilityRating:Float = 3
 var profileImage = UIImage(named: "profile.jpg")
 
 
-// Approved Jobs Container
-let approvedJobs = [Job("Fix Honda", #imageLiteral(resourceName: "honda"), "Car needs a new Battery", "806-215-3150"), Job("Clean Home", #imageLiteral(resourceName: "house"), "Living Room and Kitchen need Deep Cleaning", "806-412-5477")]
+// Approved Jobs Container, which has the ID's of jobs the user has been approved for
+let approvedJobs:[String] = [jobsPosted[2].jobID, jobsPosted[6].jobID]
 
 
-// Different Job Categories Containers
-let houseJobs = [Job("Mow Lawn", #imageLiteral(resourceName: "lawn"), "Lawn is in pretty bad shape, and needs quite the overhall.", "806-553-4946"),
-                 Job("Fix Clogged Sink",#imageLiteral(resourceName: "sink"), "My Kitchen Sink is clogged, and needs repair.", "806-969-4555")]
+// Posted Job Container
+let jobsPosted = [Job("Mow Lawn", #imageLiteral(resourceName: "lawn"), "Lawn is in pretty bad shape, and needs quite the overhall.", "jobID1", "house"),
+                  Job("Fix Clogged Sink",#imageLiteral(resourceName: "sink"), "My Kitchen Sink is clogged, and needs repair.", "jobID2", "house"),
+                  Job("Fix Honda", #imageLiteral(resourceName: "honda"), "Car needs a new Battery", "jobID3", "auto"),
+                  Job("Window Stuck Open",#imageLiteral(resourceName: "window") , "My 2010 Ford Fusion drivers window is stuck open, please help", "jobID4", "auto"),
+                  Job("Walk 2 Dogs",#imageLiteral(resourceName: "dogs"), "My babies need to be walked every Tuesday at 6 PM", "jobID5", "pet"),
+                  Job("Cat needs Grooming",#imageLiteral(resourceName: "cat"), "My Kitten, 6 months old needs a light grooming job", "jobID6", "pet"),
+                  Job("Clean Home", #imageLiteral(resourceName: "house"), "Living Room and Kitchen need Cleaning and Organizing", "jobID7", "cleaning"),
+                  Job("Carpet Deep Cleaning",#imageLiteral(resourceName: "carpet") , "Carpets in my home need Deep Cleaning", "jobID8", "cleaning")]
 
-let autoJobs = [Job("Fix Honda", #imageLiteral(resourceName: "honda"), "Car needs a new Battery", "806-553-4946"),
-                Job("Window Stuck Open",#imageLiteral(resourceName: "window") , "My 2010 Ford Fusion drivers window is stuck open, please help, i'll pay antyhing within reason to not be soaked every time it rains", "806-319-2231")]
-
-let petJobs = [Job("Walk 2 Dogs",#imageLiteral(resourceName: "dogs"), "My babies need to be walked every Tuesday at 6 PM", "806-485-1920"),
-               Job("Cat needs Grooming",#imageLiteral(resourceName: "cat"), "My Kitten, 6 months old needs a light grooming job, Please dont call if you havn't done this before", "806-485-1920")]
-
-
-let cleaningJobs = [Job("Clean Home", #imageLiteral(resourceName: "house"), "Living Room and Kitchen need Cleaning and Organizing", "806-122-2394"),
-                    Job("Carpet Deep Cleaning",#imageLiteral(resourceName: "carpet") , "Carpets in my home need Deep Cleaning", "806-455-3923")]
 
 
 

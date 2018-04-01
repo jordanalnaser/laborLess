@@ -57,7 +57,7 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     
     @IBAction func categorySelectionButton(_ sender: UIButton) {
         // Get the name of the Button that wa pressed
-        categoryString = (sender.titleLabel?.text)!
+        categoryString = (sender.accessibilityIdentifier)!
         
         // gog the categories screen
         performSegue(withIdentifier: "goToCategories", sender: sender)
@@ -88,9 +88,11 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "protoTypeCell",for: indexPath) as! JobCellTableViewCell
+        let job = getJob(jobsPosted, approvedJobs[indexPath.row])
         
-        cell.jobIcon.image = approvedJobs[indexPath.row].icon
-        cell.jobLabel.text = approvedJobs[indexPath.row].title
+        cell.jobID = job.jobID
+        cell.jobIcon.image = job.icon
+        cell.jobLabel.text = job.title
         
         return cell
     }
@@ -104,8 +106,9 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.row).")
-        
-        self.background.addSubview(JobDetailsView(frame: background.superview!.frame))
+        let cell = tableView.cellForRow(at: indexPath) as! JobCellTableViewCell!
+
+        self.background.addSubview(JobDetailsView(frame: background.superview!.frame, jobID: cell!.jobID))
     }
 
     
@@ -138,4 +141,13 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         
     }
     
+    // returns a job given an id to look for it 
+    func getJob(_ jobsPosted: [Job], _ jobID: String) -> Job {
+        for jobIndex in 0 ..< jobsPosted.count {
+            if jobsPosted[jobIndex].jobID == jobID {
+                 return jobsPosted[jobIndex]
+            }
+        }
+        return Job()
+    }
 }

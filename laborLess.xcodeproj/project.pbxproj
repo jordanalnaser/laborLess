@@ -77,10 +77,10 @@
 		199903DC205AE41A00F4BF43 /* laborLess */ = {
 			isa = PBXGroup;
 			children = (
-				19C161A7205CACF500E5EA8F /* View Controllers */,
-				19B4373A205F1F8E00B17D9B /* Views */,
 				199903DD205AE41A00F4BF43 /* AppDelegate.swift */,
 				199903E1205AE41A00F4BF43 /* Main.storyboard */,
+				19C161A7205CACF500E5EA8F /* View Controllers */,
+				19B4373A205F1F8E00B17D9B /* Views */,
 				19B43737205F1ED500B17D9B /* Model */,
 				19C161A4205C062300E5EA8F /* Supporting Files */,
 				199903E4205AE41A00F4BF43 /* Assets.xcassets */,
