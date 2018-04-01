@@ -16,7 +16,7 @@ protocol CategoriesScreenDelegate: class {
 class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // will hold the title of the button the user selected from the previous screen
-    var choice:String!
+    var categoryChoice:String!
     var jobsContainer:[Job]!
     
     // Creating Delegate link for the MainScreenEmoployee delegation task of sending us which button the user pressed
@@ -26,12 +26,14 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     // Jobs Container Table related functions, to display cells from data contianers
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return jobsContainer.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "protoTypeCell",for: indexPath) as! JobCellTableViewCell
         
+        cell.jobID = jobsContainer[indexPath.row].jobID
         cell.jobIcon.image = jobsContainer[indexPath.row].icon
         cell.jobLabel.text = jobsContainer[indexPath.row].title
         
@@ -47,11 +49,19 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.row).")
+        
+        let cell = tableView.cellForRow(at: indexPath) as! JobCellTableViewCell!
+        
+        // frame top offset
+        let barOffset = (self.navigationController?.navigationBar.frame.height)! + 5
+        let frame = self.view.frame
+        
+        self.view.addSubview(JobDetailsView(frame: CGRect(x: frame.minX, y: frame.minY + barOffset, width: frame.width, height: (frame.height - barOffset)), jobID: cell!.jobID))
     }
     
     
     override func viewDidLoad() {
-        choice = "noChoiceYet"
+        categoryChoice = "noChoiceYet"
 
         // Make sure the delegate has been set, to avoid crashing incase it hasnt been set
         guard let delegate = self.delegate else {
@@ -60,35 +70,29 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
         
         // get the choice the user clicked on from the delegate
-        choice = delegate.didSelectCategory()
+        categoryChoice = delegate.didSelectCategory()
         
         // set the title of the navigation bar to reflect the button that was pressed
-        self.navigationItem.title = choice
-        
-        
-        // Get the Appropriate Table based on user selection from previous view
-        jobsContainer = whichCategory(choice)
-        
+        self.navigationItem.title = categoryChoice
+        // get the jobs that belong in this category
+        jobsContainer = getJobsForCategory(jobsPosted, categoryChoice)
+
         
     }
     
-    
-    // function will figure out which contianer of jobbs to return based on the choice the user selected from the previous screen
-    func whichCategory(_ choice:String) -> [Job] {
-        if choice == "House & Yard Maint."{
-            return houseJobs
-        } else if choice == "Auto Work"{
-            return autoJobs
-            
-        }else if choice == "Pets"{
-            return petJobs
-            
-        }else if choice == "Cleaning"{
-            return cleaningJobs
-        } else {
-            // return the empty default contianer if the label is neither of the above cases, Error Case
-            return self.jobsContainer
+    // function returns a subet of jobs that belong in a specific cateogry
+    func getJobsForCategory(_ jobsPosted: [Job], _ categoryName: String) -> [Job] {
+        var jobsInCategory:[Job] = []
+        
+        for jobIndex in 0 ..< jobsPosted.count {
+            if jobsPosted[jobIndex].jobCategory == categoryName {
+                jobsInCategory.append(jobsPosted[jobIndex])
+            }
         }
+        
+        return jobsInCategory
     }
+   
 }
+
 

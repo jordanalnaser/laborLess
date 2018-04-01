@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		192688D8206D617900EF7920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192688D7206D617900EF7920 /* GoogleService-Info.plist */; };
 		199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199903DD205AE41A00F4BF43 /* AppDelegate.swift */; };
 		199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199903DF205AE41A00F4BF43 /* LoginScreen.swift */; };
 		199903E3205AE41A00F4BF43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199903E1205AE41A00F4BF43 /* Main.storyboard */; };
@@ -18,9 +19,12 @@
 		19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C161A5205C063F00E5EA8F /* Extensions.swift */; };
 		19D4C072206335B60087B9B3 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C071206335B60087B9B3 /* Job.swift */; };
 		19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */; };
+		19D4C07620641F280087B9B3 /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C07520641F280087B9B3 /* JobDetailsView.swift */; };
+		6AEC71A03ED7174C0B80CE0D /* Pods_laborLess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2ADFFD451B32FD2384996DC6 /* Pods_laborLess.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		192688D7206D617900EF7920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		199903DA205AE41A00F4BF43 /* laborLess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laborLess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199903DD205AE41A00F4BF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		199903DF205AE41A00F4BF43 /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
@@ -34,6 +38,10 @@
 		19C161A5205C063F00E5EA8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		19D4C071206335B60087B9B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellTableViewCell.swift; sourceTree = "<group>"; };
+		19D4C07520641F280087B9B3 /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
+		2ADFFD451B32FD2384996DC6 /* Pods_laborLess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_laborLess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5EC3D7A62BE337BD5735CB74 /* Pods-laborLess.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-laborLess.release.xcconfig"; path = "Pods/Target Support Files/Pods-laborLess/Pods-laborLess.release.xcconfig"; sourceTree = "<group>"; };
+		79CECFD14C40F8E2B15E436C /* Pods-laborLess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-laborLess.debug.xcconfig"; path = "Pods/Target Support Files/Pods-laborLess/Pods-laborLess.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AEC71A03ED7174C0B80CE0D /* Pods_laborLess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +61,8 @@
 			children = (
 				199903DC205AE41A00F4BF43 /* laborLess */,
 				199903DB205AE41A00F4BF43 /* Products */,
+				EC95135C58978B04E54DF097 /* Pods */,
+				490D5A51927A206A73D0418F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,15 +77,16 @@
 		199903DC205AE41A00F4BF43 /* laborLess */ = {
 			isa = PBXGroup;
 			children = (
-				19C161A7205CACF500E5EA8F /* View Controllers */,
-				19B4373A205F1F8E00B17D9B /* Views */,
 				199903DD205AE41A00F4BF43 /* AppDelegate.swift */,
 				199903E1205AE41A00F4BF43 /* Main.storyboard */,
+				19C161A7205CACF500E5EA8F /* View Controllers */,
+				19B4373A205F1F8E00B17D9B /* Views */,
 				19B43737205F1ED500B17D9B /* Model */,
 				19C161A4205C062300E5EA8F /* Supporting Files */,
 				199903E4205AE41A00F4BF43 /* Assets.xcassets */,
 				199903E6205AE41A00F4BF43 /* LaunchScreen.storyboard */,
 				199903E9205AE41A00F4BF43 /* Info.plist */,
+				192688D7206D617900EF7920 /* GoogleService-Info.plist */,
 			);
 			path = laborLess;
 			sourceTree = "<group>";
@@ -92,6 +104,7 @@
 		19B4373A205F1F8E00B17D9B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				19D4C07520641F280087B9B3 /* JobDetailsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,6 +127,23 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		490D5A51927A206A73D0418F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ADFFD451B32FD2384996DC6 /* Pods_laborLess.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC95135C58978B04E54DF097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79CECFD14C40F8E2B15E436C /* Pods-laborLess.debug.xcconfig */,
+				5EC3D7A62BE337BD5735CB74 /* Pods-laborLess.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +151,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 199903EC205AE41A00F4BF43 /* Build configuration list for PBXNativeTarget "laborLess" */;
 			buildPhases = (
+				8394EE476C54D1C080300055 /* [CP] Check Pods Manifest.lock */,
 				199903D6205AE41A00F4BF43 /* Sources */,
 				199903D7205AE41A00F4BF43 /* Frameworks */,
 				199903D8205AE41A00F4BF43 /* Resources */,
+				A33A194B7B57C3EFAC8FB974 /* [CP] Embed Pods Frameworks */,
+				B7AB4BB4D619EC8B53336556 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -174,12 +207,69 @@
 			buildActionMask = 2147483647;
 			files = (
 				199903E8205AE41A00F4BF43 /* LaunchScreen.storyboard in Resources */,
+				192688D8206D617900EF7920 /* GoogleService-Info.plist in Resources */,
 				199903E5205AE41A00F4BF43 /* Assets.xcassets in Resources */,
 				199903E3205AE41A00F4BF43 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8394EE476C54D1C080300055 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-laborLess-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A33A194B7B57C3EFAC8FB974 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-laborLess/Pods-laborLess-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-laborLess/Pods-laborLess-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7AB4BB4D619EC8B53336556 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-laborLess/Pods-laborLess-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		199903D6205AE41A00F4BF43 /* Sources */ = {
@@ -189,6 +279,7 @@
 				19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */,
 				19B43739205F1EF000B17D9B /* Data.swift in Sources */,
 				199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */,
+				19D4C07620641F280087B9B3 /* JobDetailsView.swift in Sources */,
 				19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */,
 				19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */,
 				199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */,
@@ -328,6 +419,7 @@
 		};
 		199903ED205AE41A00F4BF43 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79CECFD14C40F8E2B15E436C /* Pods-laborLess.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -337,12 +429,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jordanAlnaser.laborLess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		199903EE205AE41A00F4BF43 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EC3D7A62BE337BD5735CB74 /* Pods-laborLess.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -352,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jordanAlnaser.laborLess;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -8,6 +8,7 @@
 import  UIKit
 
 
+// This is used for the blur effect on the main screen
 extension UIImage {
     static func imageWithColor(tintColor: UIColor) -> UIImage {
         let rect = CGRect(x: 0, y: 0, width: 1, height: 1)

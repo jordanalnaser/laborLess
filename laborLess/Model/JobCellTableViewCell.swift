@@ -12,6 +12,9 @@ class JobCellTableViewCell: UITableViewCell {
 
     @IBOutlet weak var jobLabel: UILabel!
     @IBOutlet weak var jobIcon: UIImageView!
+    
+    var jobID:String!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

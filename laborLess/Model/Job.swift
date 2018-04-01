@@ -11,12 +11,22 @@ class Job {
     var title:String
     var icon:UIImage
     var description:String
-    var phoneNumber:String
+    var jobCategory: String
+    var jobID:String
     
-    init(_ title:String, _ icon:UIImage, _ description: String, _ phoneNumber: String) {
+    init (){
+        self.title = ""
+        self.icon = UIImage()
+        self.description = ""
+        self.jobID = ""
+        self.jobCategory = ""
+    }
+    
+    init(_ title:String, _ icon:UIImage, _ description: String, _ jobId: String, _ jobCategory:String) {
         self.title = title
         self.icon = icon
         self.description = description
-        self.phoneNumber = phoneNumber
+        self.jobID = jobId
+        self.jobCategory = jobCategory
     }
 }
