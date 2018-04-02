@@ -50,13 +50,13 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         // note that indexPath.section is used rather than indexPath.row
         print("You tapped cell number \(indexPath.row).")
         
-        let cell = tableView.cellForRow(at: indexPath) as! JobCellTableViewCell!
+        let cell = tableView.cellForRow(at: indexPath) as! JobCellTableViewCell
         
         // frame top offset
         let barOffset = (self.navigationController?.navigationBar.frame.height)! + 5
         let frame = self.view.frame
         
-        self.view.addSubview(JobDetailsView(frame: CGRect(x: frame.minX, y: frame.minY + barOffset, width: frame.width, height: (frame.height - barOffset)), jobID: cell!.jobID))
+        self.view.addSubview(JobDetailsView(frame: CGRect(x: frame.minX, y: frame.minY + barOffset, width: frame.width, height: (frame.height - barOffset)), jobID: cell.jobID))
     }
     
     
