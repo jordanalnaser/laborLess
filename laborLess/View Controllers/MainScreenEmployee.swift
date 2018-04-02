@@ -83,12 +83,12 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
     
     //MARK: Jobs Approved Table delegate functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return approvedJobs.count
+        return UserManager.getApprovedJobs().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCell(withIdentifier: "protoTypeCell",for: indexPath) as! JobCellTableViewCell
-        let job = getJob(jobsPosted, approvedJobs[indexPath.row])
+        let job = getJob(UserManager.getJobsContainer(), UserManager.getApprovedJobs()[indexPath.row])
         
         cell.jobID = job.jobID
         cell.jobIcon.image = job.icon
@@ -129,17 +129,14 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         
         
         // adding Profile Data
-        greetingLabel.text = "Hello, \(firstName)"
-        
-        professionalismProgress.progress = professionalismRating/10
-        knowledgeProgress.progress = knowledgeRating/10
-        affordabilityProgress.progress = affordabilityRating/10
-        
-        
-        
-        
+        greetingLabel.text = "Hello, \n\(UserManager.getUsername())"
+        profilePicture.image = UserManager.getProfilePicture()
+        professionalismProgress.progress = UserManager.getProffRating()
+        knowledgeProgress.progress = UserManager.getKnowRating()
+        affordabilityProgress.progress = UserManager.getAffoRating()
         
     }
+    
     
     // returns a job given an id to look for it 
     func getJob(_ jobsPosted: [Job], _ jobID: String) -> Job {

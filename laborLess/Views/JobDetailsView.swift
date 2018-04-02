@@ -101,9 +101,9 @@ class JobDetailsView: UIView {
         
         let jobIndex = getJob(jobID)
         
-        jobTitle.text = jobsPosted[jobIndex].description
-        jobPicture.image = jobsPosted[jobIndex].icon
-        jobDescription.text = "Description: \n\(jobsPosted[jobIndex].description)"
+        jobTitle.text = UserManager.getJobsContainer()[jobIndex].description
+        jobPicture.image = UserManager.getJobsContainer()[jobIndex].icon
+        jobDescription.text = "Description: \n\(UserManager.getJobsContainer()[jobIndex].description)"
         
         
         
@@ -174,8 +174,8 @@ class JobDetailsView: UIView {
     
     // this function gives me back the job index i need to display to the user
     func getJob(_ jobID: String) -> Int {
-        for jobIndex in 0 ..< jobsPosted.count {
-            if jobsPosted[jobIndex].jobID == jobID {
+        for jobIndex in 0 ..< UserManager.getJobsContainer().count {
+            if UserManager.getJobsContainer()[jobIndex].jobID == jobID {
                 return jobIndex
             }
         }

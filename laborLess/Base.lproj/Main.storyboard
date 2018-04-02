@@ -179,14 +179,16 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f3S-ak-rrX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greeting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXh-HR-7Xt">
-                                        <rect key="frame" x="8" y="8" width="105" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greeting" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fXh-HR-7Xt">
+                                        <rect key="frame" x="10" y="10" width="170" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="oOi-dO-ub6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="Eew-8a-8C0">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eew-8a-8C0">
                                         <rect key="frame" x="190" y="10" width="180" height="196"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="196" id="aLi-co-X1S"/>
@@ -316,10 +318,13 @@
                                     <constraint firstAttribute="trailing" secondItem="tKf-Zu-Uma" secondAttribute="trailing" constant="10" id="PW4-I8-8qJ"/>
                                     <constraint firstItem="AqI-2b-I81" firstAttribute="centerY" secondItem="f3S-ak-rrX" secondAttribute="centerY" constant="95" id="ZcA-jL-V9C"/>
                                     <constraint firstItem="AqI-2b-I81" firstAttribute="centerX" secondItem="f3S-ak-rrX" secondAttribute="centerX" id="aRz-wI-PI5"/>
+                                    <constraint firstItem="fXh-HR-7Xt" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="10" id="cfq-hV-TjZ"/>
                                     <constraint firstAttribute="trailing" secondItem="Quc-uH-bpw" secondAttribute="trailing" constant="10" id="lTC-4n-ueg"/>
                                     <constraint firstAttribute="trailing" secondItem="Eew-8a-8C0" secondAttribute="trailing" constant="5" id="mes-Sx-Eh5"/>
+                                    <constraint firstItem="fXh-HR-7Xt" firstAttribute="top" secondItem="f3S-ak-rrX" secondAttribute="top" constant="10" id="n6q-Fb-iPU"/>
                                     <constraint firstItem="tKf-Zu-Uma" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="10" id="o31-19-95B"/>
                                     <constraint firstItem="Eew-8a-8C0" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="190" id="pCt-fR-tPZ"/>
+                                    <constraint firstItem="Eew-8a-8C0" firstAttribute="leading" secondItem="fXh-HR-7Xt" secondAttribute="trailing" constant="10" id="svn-W1-Kvp"/>
                                     <constraint firstAttribute="bottom" secondItem="Quc-uH-bpw" secondAttribute="bottom" constant="5" id="x6W-mW-dnB"/>
                                     <constraint firstItem="Quc-uH-bpw" firstAttribute="leading" secondItem="f3S-ak-rrX" secondAttribute="leading" constant="10" id="xjE-4m-avm"/>
                                 </constraints>
@@ -451,6 +456,5 @@
     <resources>
         <image name="Hamburger Icon" width="50" height="50"/>
         <image name="logo" width="623" height="623"/>
-        <image name="profile" width="483" height="596"/>
     </resources>
 </document>

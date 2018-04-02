@@ -7,5 +7,8 @@ target 'laborLess' do
 
   # Pods for laborLess
   pod 'Firebase/Core'
+  pod 'Firebase'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
 
 end
