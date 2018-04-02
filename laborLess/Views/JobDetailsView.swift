@@ -101,7 +101,7 @@ class JobDetailsView: UIView {
         
         let jobIndex = getJob(jobID)
         
-        jobTitle.text = UserManager.getJobsContainer()[jobIndex].description
+        jobTitle.text = UserManager.getJobsContainer()[jobIndex].title
         jobPicture.image = UserManager.getJobsContainer()[jobIndex].icon
         jobDescription.text = "Description: \n\(UserManager.getJobsContainer()[jobIndex].description)"
         
