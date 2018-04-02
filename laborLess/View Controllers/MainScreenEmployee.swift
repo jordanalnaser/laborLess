@@ -118,6 +118,11 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // This is where the logic for the UIView displaying user background check status will be added as a subview, and then removed from superview when
+        // user clicks the button in it to refresh
+        print("Status: \(UserManager.getBackgroundCheckStatus())")
+        
+        
         // Setup the background color
         background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
         

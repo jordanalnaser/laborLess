@@ -20,6 +20,7 @@ class UserManager {
     private var profilePicture:UIImage!
     private var approvedJobs:[String]!
     private var jobsContainer:[Job]!
+    private var backgroundCheckStatus:String!
     
     // Ratings Out of 10
     private var knowledgeRating:Float!
@@ -31,6 +32,7 @@ class UserManager {
         userID = "AmJkvUyHEgOlS22G9VsrmzHTMqD3"
         emailAddress = ""
         userName = ""
+        backgroundCheckStatus = ""
         profilePicture = UIImage()
         approvedJobs = []
         affordabilityRating = 0.0
@@ -50,8 +52,9 @@ class UserManager {
             let currentUser = snapshot.value as! NSDictionary
             
             // Load up the goodies from Firebase
-            sharedInstance.emailAddress = (currentUser.value(forKey: "email")) as! String
+            sharedInstance.emailAddress = currentUser.value(forKey: "email") as! String
             sharedInstance.userName = currentUser.value(forKey: "username") as! String
+            sharedInstance.backgroundCheckStatus = currentUser.value(forKey: "backgroundCheckStatus") as! String
             sharedInstance.profilePicture = getImagefromURL(currentUser.value(forKey: "profilePicture") as! String)
             
             // Get the sub snapshot containg the list of approved jobs
@@ -136,6 +139,10 @@ class UserManager {
     
     static func getuserID() -> String {
         return sharedInstance.userID
+    }
+    
+    static func getBackgroundCheckStatus() -> String {
+        return sharedInstance.backgroundCheckStatus
     }
     
     static func getApprovedJobs() -> [String] {
