@@ -36,6 +36,8 @@ class UserManager {
         affordabilityRating = 0.0
         professionalismRating = 0.0
         knowledgeRating = 0.0
+        jobsContainer = []
+        
     }
     
     
@@ -68,7 +70,6 @@ class UserManager {
             let knowRating = snapshot.childSnapshot(forPath: "knowledge").value as! [String:Float]
             let affoRatings = snapshot.childSnapshot(forPath: "affordability").value as! [String:Float]
         
-            print(calcRating(knowRating))
             // Load up the goodies from Firebase
             sharedInstance.knowledgeRating = calcRating(knowRating)
             sharedInstance.affordabilityRating = calcRating(affoRatings)
@@ -81,8 +82,22 @@ class UserManager {
     
     // Called to load up the jobs container
     static func loadJobsContainer(){
-       
-        
+       // Load it up
+        sharedInstance.ref.child("Jobs").observeSingleEvent(of: .value, with: { (snapshot) in
+            let jobs = snapshot.value as! [String:NSDictionary]
+
+            for job in jobs {
+                let jobAttributes = job.value // hold the job attributes
+                let jobID = job.key
+                let jobTitle = jobAttributes.value(forKey: "jobName") as! String
+                let jobPicture = getImagefromURL(jobAttributes.value(forKey: "jobPicture") as! String)
+                let jobDescription = jobAttributes.value(forKey: "jobDescription") as! String
+                let jobCategory = jobAttributes.value(forKey: "department_id") as! String
+                    
+                sharedInstance.jobsContainer.append(Job(jobTitle, jobPicture, jobDescription, jobID, jobCategory))
+            }
+            
+        })
     }
     
 
@@ -141,5 +156,9 @@ class UserManager {
     
     static func getAffoRating() -> Float {
         return sharedInstance.affordabilityRating/10
+    }
+    
+    static func getJobsContainer() -> [Job] {
+        return sharedInstance.jobsContainer
     }
 }

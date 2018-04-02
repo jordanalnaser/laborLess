@@ -74,10 +74,9 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         // set the title of the navigation bar to reflect the button that was pressed
         self.navigationItem.title = categoryChoice
-        // get the jobs that belong in this category
-        jobsContainer = getJobsForCategory(jobsPosted, categoryChoice)
-
         
+        // get the jobs that belong in this category
+        jobsContainer = getJobsForCategory(UserManager.getJobsContainer(), categoryChoice)
     }
     
     // function returns a subet of jobs that belong in a specific cateogry
@@ -89,10 +88,8 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
                 jobsInCategory.append(jobsPosted[jobIndex])
             }
         }
-        
         return jobsInCategory
     }
-   
 }
 
 

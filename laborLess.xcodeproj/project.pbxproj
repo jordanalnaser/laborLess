@@ -15,7 +15,6 @@
 		199903E5205AE41A00F4BF43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 199903E4205AE41A00F4BF43 /* Assets.xcassets */; };
 		199903E8205AE41A00F4BF43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 199903E6205AE41A00F4BF43 /* LaunchScreen.storyboard */; };
 		19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B43735205EE52A00B17D9B /* MainScreenEmployee.swift */; };
-		19B43739205F1EF000B17D9B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B43738205F1EF000B17D9B /* Data.swift */; };
 		19B4373C205F709300B17D9B /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B4373B205F709300B17D9B /* CategoriesScreen.swift */; };
 		19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C161A5205C063F00E5EA8F /* Extensions.swift */; };
 		19D4C072206335B60087B9B3 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C071206335B60087B9B3 /* Job.swift */; };
@@ -35,7 +34,6 @@
 		199903E7205AE41A00F4BF43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		199903E9205AE41A00F4BF43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19B43735205EE52A00B17D9B /* MainScreenEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenEmployee.swift; sourceTree = "<group>"; };
-		19B43738205F1EF000B17D9B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		19B4373B205F709300B17D9B /* CategoriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreen.swift; sourceTree = "<group>"; };
 		19C161A5205C063F00E5EA8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		19D4C071206335B60087B9B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				190782E220717B9F00FE4298 /* UserManager.swift */,
-				19B43738205F1EF000B17D9B /* Data.swift */,
 				19D4C071206335B60087B9B3 /* Job.swift */,
 				19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */,
 			);
@@ -284,7 +281,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */,
-				19B43739205F1EF000B17D9B /* Data.swift in Sources */,
 				199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */,
 				19D4C07620641F280087B9B3 /* JobDetailsView.swift in Sources */,
 				19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */,
