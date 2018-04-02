@@ -129,15 +129,11 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         
         
         // adding Profile Data
-        greetingLabel.text = "Hello, \(firstName)"
-        
-        professionalismProgress.progress = professionalismRating/10
-        knowledgeProgress.progress = knowledgeRating/10
-        affordabilityProgress.progress = affordabilityRating/10
-        
-        
-        
-        
+        greetingLabel.text = "Hello, \n\(UserManager.getUsername())"
+        profilePicture.image = UserManager.getProfilePicture()
+        professionalismProgress.progress = UserManager.getProffRating()
+        knowledgeProgress.progress = UserManager.getKnowRating()
+        affordabilityProgress.progress = UserManager.getAffoRating()
         
     }
     

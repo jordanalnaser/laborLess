@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		190782E320717B9F00FE4298 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 190782E220717B9F00FE4298 /* UserManager.swift */; };
 		192688D8206D617900EF7920 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 192688D7206D617900EF7920 /* GoogleService-Info.plist */; };
 		199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199903DD205AE41A00F4BF43 /* AppDelegate.swift */; };
 		199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199903DF205AE41A00F4BF43 /* LoginScreen.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		190782E220717B9F00FE4298 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		192688D7206D617900EF7920 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		199903DA205AE41A00F4BF43 /* laborLess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laborLess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		199903DD205AE41A00F4BF43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		19B43737205F1ED500B17D9B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				190782E220717B9F00FE4298 /* UserManager.swift */,
 				19B43738205F1EF000B17D9B /* Data.swift */,
 				19D4C071206335B60087B9B3 /* Job.swift */,
 				19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */,
@@ -241,12 +244,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-laborLess/Pods-laborLess-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +291,7 @@
 				19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */,
 				199903DE205AE41A00F4BF43 /* AppDelegate.swift in Sources */,
 				19D4C072206335B60087B9B3 /* Job.swift in Sources */,
+				190782E320717B9F00FE4298 /* UserManager.swift in Sources */,
 				19B4373C205F709300B17D9B /* CategoriesScreen.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
