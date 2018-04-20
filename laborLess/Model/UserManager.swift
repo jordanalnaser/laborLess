@@ -29,7 +29,7 @@ class UserManager {
     
     // Do the init stuff here to
     private init(){
-        userID = "AmJkvUyHEgOlS22G9VsrmzHTMqD3"
+        userID = "TJLwnH3H3bdaJSNB7enPVuyRiPw1"
         emailAddress = ""
         userName = ""
         backgroundCheckStatus = ""
@@ -93,7 +93,7 @@ class UserManager {
                 let jobAttributes = job.value // hold the job attributes
                 let jobID = job.key
                 let jobTitle = jobAttributes.value(forKey: "jobName") as! String
-                let jobPicture = getImagefromURL(jobAttributes.value(forKey: "jobPicture") as! String)
+                let jobPicture =  getImageTemp(jobAttributes.value(forKey: "department_id") as! String) // getImagefromURL(jobAttributes.value(forKey: "jobPicture") as! String)
                 let jobDescription = jobAttributes.value(forKey: "jobDescription") as! String
                 let jobCategory = jobAttributes.value(forKey: "department_id") as! String
                     
@@ -115,6 +115,25 @@ class UserManager {
         return (sum/Float(ratings.count))
         
     }
+    
+    
+    private static func getImageTemp(_ jobCategory:String) -> UIImage{
+        switch jobCategory {
+        case "pet":
+            return #imageLiteral(resourceName: "pet")
+        case "house":
+            return #imageLiteral(resourceName: "house")
+        case "cleaning":
+            return #imageLiteral(resourceName: "cleaning")
+        case "auto":
+            return #imageLiteral(resourceName: "auto")
+        default:
+            return #imageLiteral(resourceName: "profile")
+        }
+    }
+    
+    
+ 
     private static func getImagefromURL(_ URLString:String) -> UIImage {
         let imageURL:URL = URL(string: URLString)!
         var image:UIImage!
