@@ -136,9 +136,6 @@ class JobDetailsView: UIView {
                             // Load up user Info
                             UserManager.getRef().child("Jobs/\(self.theJobID)/queuedWorkers").childByAutoId().setValue(UserManager.getuserID())
                             
-                            
-                            
-                            
                             // Animate the Job Details view exsiting the screen, then remove it form superview
                             UIView.animate(withDuration: 0.15, delay: 0, options: .curveLinear, animations: {
                                 
