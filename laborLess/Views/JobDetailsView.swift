@@ -15,6 +15,7 @@ class JobDetailsView: UIView {
     let jobDescription:UILabel
     let cancelButton:UIButton
     let addButton:UIButton
+    var theJobID:String
     
     // Size of Pop up Options Menu
     var size:CGFloat = 0
@@ -28,6 +29,7 @@ class JobDetailsView: UIView {
         jobDescription = UILabel()
         cancelButton = UIButton()
         addButton = UIButton()
+        theJobID = ""
         
         // Call super class (UIView) initilizer, which sets up the frame of the current view
         super.init(frame: frame)
@@ -104,7 +106,7 @@ class JobDetailsView: UIView {
         jobTitle.text = UserManager.getJobsContainer()[jobIndex].title
         jobPicture.image = UserManager.getJobsContainer()[jobIndex].icon
         jobDescription.text = "Description: \n\(UserManager.getJobsContainer()[jobIndex].description)"
-        
+        self.theJobID =  UserManager.getJobsContainer()[jobIndex].jobID
         
         
     // MARK: Add Elements to the view
@@ -131,6 +133,9 @@ class JobDetailsView: UIView {
                             })
                             
                             // DO LOGIC HERE THAT CORRSPONDS TO WHAT THE BUTTON IS SUPPOSED TO DO
+                            // Load up user Info
+                            UserManager.getRef().child("Jobs/\(self.theJobID)/queuedWorkers").childByAutoId().setValue(UserManager.getuserID())
+                            
                             
                             
                             

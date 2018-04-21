@@ -160,6 +160,10 @@ class UserManager {
         return sharedInstance.userID
     }
     
+    static func getRef() -> DatabaseReference {
+        return sharedInstance.ref
+    }
+    
     static func getBackgroundCheckStatus() -> String {
         return sharedInstance.backgroundCheckStatus
     }
