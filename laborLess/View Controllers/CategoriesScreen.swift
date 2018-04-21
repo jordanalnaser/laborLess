@@ -30,6 +30,27 @@ class CategoriesScreen: UIViewController, UITableViewDelegate, UITableViewDataSo
         return jobsContainer.count
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            // remove job from the data base
+            UserManager.getRef().child("Jobs/\(jobsContainer[indexPath.row].jobID)").removeValue()
+            
+            print("child deleteed form the databse")
+
+            
+            jobsContainer.remove(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        }
+    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "protoTypeCell",for: indexPath) as! JobCellTableViewCell
         
