@@ -17,6 +17,7 @@
 		19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B43735205EE52A00B17D9B /* MainScreenEmployee.swift */; };
 		19B4373C205F709300B17D9B /* CategoriesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B4373B205F709300B17D9B /* CategoriesScreen.swift */; };
 		19C161A6205C063F00E5EA8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C161A5205C063F00E5EA8F /* Extensions.swift */; };
+		19D071B5208AD471004919D5 /* backGroundCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D071B4208AD471004919D5 /* backGroundCheckView.swift */; };
 		19D4C072206335B60087B9B3 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C071206335B60087B9B3 /* Job.swift */; };
 		19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */; };
 		19D4C07620641F280087B9B3 /* JobDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D4C07520641F280087B9B3 /* JobDetailsView.swift */; };
@@ -36,6 +37,7 @@
 		19B43735205EE52A00B17D9B /* MainScreenEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenEmployee.swift; sourceTree = "<group>"; };
 		19B4373B205F709300B17D9B /* CategoriesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesScreen.swift; sourceTree = "<group>"; };
 		19C161A5205C063F00E5EA8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		19D071B4208AD471004919D5 /* backGroundCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backGroundCheckView.swift; sourceTree = "<group>"; };
 		19D4C071206335B60087B9B3 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		19D4C07320633EA60087B9B3 /* JobCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellTableViewCell.swift; sourceTree = "<group>"; };
 		19D4C07520641F280087B9B3 /* JobDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				19D4C07520641F280087B9B3 /* JobDetailsView.swift */,
+				19D071B4208AD471004919D5 /* backGroundCheckView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19B43736205EE52A00B17D9B /* MainScreenEmployee.swift in Sources */,
+				19D071B5208AD471004919D5 /* backGroundCheckView.swift in Sources */,
 				199903E0205AE41A00F4BF43 /* LoginScreen.swift in Sources */,
 				19D4C07620641F280087B9B3 /* JobDetailsView.swift in Sources */,
 				19D4C07420633EA60087B9B3 /* JobCellTableViewCell.swift in Sources */,

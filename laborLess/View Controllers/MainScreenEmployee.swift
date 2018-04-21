@@ -122,6 +122,11 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         // user clicks the button in it to refresh
         print("Status: \(UserManager.getBackgroundCheckStatus())")
         
+        if UserManager.getBackgroundCheckStatus() != "passed" {
+            // user didnt pass background check yet, launch view that will lbock user form acessing the app
+            self.view.addSubview(backGroundCheckView(frame: self.view.frame))
+        }
+        
         
         // Setup the background color
         background.backgroundColor = UIColor.init(red: 139.0/255, green: 26.0/255, blue: 16.0/255, alpha: 1)
@@ -141,6 +146,7 @@ class MainScreenEmployee: UIViewController, CategoriesScreenDelegate, UITableVie
         affordabilityProgress.progress = UserManager.getAffoRating()
         
     }
+    
     
     
     // returns a job given an id to look for it 
